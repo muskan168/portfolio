@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>skill</title>
+</head>
+<body>
+    <style>
+        /* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+#skills {
+    background-color: #f4f4f4;
+    padding: 50px 0;
+}
+
+.skills-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+h2 {
+    text-align: center;
+    font-size: 36px;
+    margin-bottom: 50px;
+    color: #333;
+}
+
+.skill {
+    background-color: white;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 30px;
+}
+
+.skill h3 {
+    font-size: 28px;
+    margin-bottom: 15px;
+    color: #009688;
+}
+
+.skill ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.skill li {
+    font-size: 18px;
+    margin: 8px 0;
+    color: #555;
+    position: relative;
+}
+
+/* Progress Bar */
+.progress-bar {
+    background-color: #e0e0e0;
+    border-radius: 5px;
+    height: 10px;
+    width: 100%;
+    margin-top: 5px;
+    position: relative;
+}
+
+.progress {
+    background-color: #009688;
+    height: 100%;
+    width: 0;
+    border-radius: 5px;
+    transition: width 0.5s ease-in-out;
+}
+
+/* Responsive Design */
+@media (min-width: 768px) {
+    .skills-container {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .skill {
+        width: 30%;
+    }
+}
+
+    </style>
+    <section id="skills">
+        <div class="skills-container">
+            <h2>My Skills</h2>
+    
+            <div class="skill">
+                <h3>Frontend Development</h3>
+                <ul>
+                    <li>
+                        HTML
+                        <div class="progress-bar">
+                            <div class="progress" data-skill="90%"></div>
+                        </div>
+                    </li>
+                    <li>
+                        CSS
+                        <div class="progress-bar">
+                            <div class="progress" data-skill="85%"></div>
+                        </div>
+                    </li>
+                    <li>
+                        JavaScript
+                        <div class="progress-bar">
+                            <div class="progress" data-skill="80%"></div>
+                        </div>
+                    </li>
+                    <li>
+                        React
+                        <div class="progress-bar">
+                            <div class="progress" data-skill="75%"></div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+    
+            <div class="skill">
+                <h3>Backend Development</h3>
+                <ul>
+                    <li>
+                        Python
+                        <div class="progress-bar">
+                            <div class="progress" data-skill="90%"></div>
+                        </div>
+                    </li>
+                    <li>
+                        PHP
+                        <div class="progress-bar">
+                            <div class="progress" data-skill="85%"></div>
+                        </div>
+                    </li>
+                    <li>
+                        Node.js
+                        <div class="progress-bar">
+                            <div class="progress" data-skill="70%"></div>
+                        </div>
+                    </li>
+                    <li>
+                        SQL
+                        <div class="progress-bar">
+                            <div class="progress" data-skill="80%"></div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+    
+            <div class="skill">
+                <h3>Tools & Technologies</h3>
+                <ul>
+                    <li>
+                        Git & GitHub
+                        <div class="progress-bar">
+                            <div class="progress" data-skill="95%"></div>
+                        </div>
+                    </li>
+                    <li>
+                        Postman API
+                        <div class="progress-bar">
+                            <div class="progress" data-skill="80%"></div>
+                        </div>
+                    </li>
+                    <li>
+                        Terminal (Termux)
+                        <div class="progress-bar">
+                            <div class="progress" data-skill="85%"></div>
+                        </div>
+                    </li>
+                    <li>
+                        Selenium & BeautifulSoup
+                        <div class="progress-bar">
+                            <div class="progress" data-skill="90%"></div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </section>
+    
+</body>
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+    const progressBars = document.querySelectorAll(".progress");
+
+    // Loop through each progress bar and set width based on data-skill attribute
+    progressBars.forEach(bar => {
+        const skillLevel = bar.getAttribute("data-skill");
+        bar.style.width = skillLevel;
+    });
+});
+
+</script>
+</html>
